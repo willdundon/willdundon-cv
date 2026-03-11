@@ -125,8 +125,17 @@
             border-top: 1px solid #151515;
             display: flex;
             justify-content: flex-end;
+            align-items: center;
             gap: 15px;
             flex-wrap: wrap;
+        }
+
+        .pdf-hint {
+            width: 100%;
+            text-align: right;
+            font-size: 0.8em;
+            color: #666;
+            margin-top: -8px;
         }
 
         h3 a {
@@ -162,7 +171,6 @@
             letter-spacing: 0.15em;
             margin-bottom: 40px;
             font-weight: 500;
-            opacity: 0.6;
         }
 
         h3 {
@@ -342,7 +350,12 @@
             margin-bottom: 16px;
             padding-left: 0;
             color: #999;
-            font-size: 0.9em;
+            font-size: 0.92em;
+            line-height: 1.5;
+        }
+
+        .education-list li:last-child {
+            margin-bottom: 0;
         }
 
         .education-list li:before {
@@ -351,6 +364,12 @@
 
         .education-list strong {
             color: #fff;
+            font-weight: 500;
+            font-size: 0.9em;
+        }
+
+        .education-list .education-institution {
+            color: #888;
             font-weight: 400;
         }
 
@@ -368,6 +387,22 @@
         }
 
         .reference-link:hover {
+            color: #fff;
+            border-bottom-color: #666;
+        }
+
+        .reference-request-text {
+            color: #999;
+            font-size: 0.9em;
+            line-height: 1.8;
+        }
+
+        .reference-request-text .reference-link {
+            color: #888;
+            border-bottom-color: #333;
+        }
+
+        .reference-request-text .reference-link:hover {
             color: #fff;
             border-bottom-color: #666;
         }
@@ -407,16 +442,44 @@
 
         .skill-category {
             color: #999;
-            font-size: 0.85em;
-            margin-top: 30px;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
+            font-size: 0.78em;
+            margin-top: 28px;
+            margin-bottom: 8px;
+            text-transform: none;
+            letter-spacing: 0.02em;
             font-weight: 500;
         }
 
         .skill-category:first-child {
             margin-top: 0;
+        }
+
+        .technical-skills-content .skills-grid {
+            grid-template-columns: 1fr;
+            gap: 2px 0;
+            margin-top: 6px;
+        }
+
+        .skill-line {
+            margin-bottom: 14px;
+            font-size: 0.92em;
+            color: #aaa;
+            line-height: 1.5;
+        }
+
+        .skill-line:last-child {
+            margin-bottom: 0;
+        }
+
+        .skill-line .skill-category-inline {
+            font-weight: 500;
+            font-size: 0.9em;
+            color: #fff;
+        }
+
+        .skill-line .skill-tools {
+            color: #888;
+            font-weight: 400;
         }
 
         .photo-toggle-button {
@@ -490,30 +553,150 @@
 
         @media print {
             body {
-                background: #000;
+                background: #0a0a0a !important;
+                font-size: 12px;
+                line-height: 1.5;
                 print-color-adjust: exact;
                 -webkit-print-color-adjust: exact;
             }
 
+            .container {
+                background: #0a0a0a !important;
+            }
+
             header {
-                padding: 40px 40px 30px;
+                padding: 28px 40px 24px;
+                border-bottom-color: #1a1a1a;
+            }
+
+            header h1 {
+                font-size: 2.2em;
+                margin-bottom: 6px;
+            }
+
+            .contact-info {
+                margin-top: 10px;
+                font-size: 0.9em;
+            }
+
+            .focus-area {
+                margin-top: 14px;
+                font-size: 0.9em;
+                line-height: 1.5;
             }
 
             .content {
-                padding: 40px;
-            }
-
-            .experience-item {
-                page-break-inside: avoid;
+                padding: 32px 40px 40px;
             }
 
             section {
+                margin-bottom: 28px;
                 page-break-inside: avoid;
+            }
+
+            section h2 {
+                font-size: 0.74em;
+                margin-bottom: 16px;
+            }
+
+            .summary {
+                padding: 24px 28px;
+                margin-bottom: 28px;
+                font-size: 0.95em;
+                line-height: 1.65;
+                page-break-inside: avoid;
+            }
+
+            .summary p {
+                margin-bottom: 14px;
+            }
+
+            .achievements-grid {
+                gap: 14px;
+                margin-top: 16px;
+            }
+
+            .achievement-card {
+                padding: 20px 14px;
+            }
+
+            .achievement-number {
+                font-size: 1.6em;
+                margin-bottom: 6px;
+            }
+
+            .achievement-label {
+                font-size: 0.82em;
+            }
+
+            .experience-item {
+                margin-bottom: 24px;
+                padding-bottom: 24px;
+                page-break-inside: avoid;
+            }
+
+            .job-header h3 {
+                font-size: 1.06em;
+            }
+
+            .job-period {
+                font-size: 0.84em;
+            }
+
+            .job-location,
+            .job-title {
+                font-size: 0.88em;
+                margin-bottom: 8px;
+            }
+
+            .experience-item ul {
+                margin-top: 10px;
+            }
+
+            .experience-item li {
+                margin-bottom: 8px;
+                font-size: 0.9em;
+                line-height: 1.55;
+            }
+
+            .skill-item {
+                padding: 8px 0;
+                font-size: 0.9em;
+            }
+
+            .skill-category {
+                margin-top: 16px;
+                margin-bottom: 8px;
+                font-size: 0.82em;
+            }
+
+            .education-list li {
+                margin-bottom: 10px;
+                font-size: 0.9em;
+            }
+
+            .global-text,
+            .reference-request-text {
+                font-size: 0.92em;
+                line-height: 1.6;
+            }
+
+            .pdf-container,
+            .pdf-hint {
+                display: none !important;
+            }
+
+            .photo-toggle-button {
+                display: none !important;
+            }
+
+            .photo-gallery-container {
+                display: none !important;
             }
 
             @page {
                 size: A4;
-                margin: 15mm;
+                margin: 14mm;
             }
         }
 
@@ -605,23 +788,26 @@
             </div>
             <div class="focus-area">
                 Executive Leadership · Strategy · Systems Design, Feedback & Implementation · Automation · Operations ·
-                Cross-Cultural Leader · Technical Implementation · Web Design & Development · Project Management
+                Cross-Cultural Leader · Technical Executer · Web Design & Development · Project Management
             </div>
         </header>
 
         <div class="content">
             <section>
                 <div class="summary">
-                    <p>I see systems where others see chaos. I design intelligent workflow solutions that cut through
-                        operational complexity, then automate strategically so teams can focus on what
-                        matters, delivering measurable results across climate technology sectors, regenerative
-                        agriculture and live event operations.</p>
-                    <p>I'm driven by continuous improvement and set standards centred on excellence that lift entire
-                        organisations up. I do it by connecting authentically with the people first. Whether it's
-                        working with field teams in Kenya,
-                        Founders in Sweden, Developers in Czech, Indigenous Leaders in India or festival crews in
-                        Portugal. I build relationships that enable seamless
-                        collaboration. I turn complex challenges into streamlined solutions that actually work.</p>
+                    <p>I am Will Dundon. A natural leader, entrepreneur, system designer, artist, writer and many other
+                        things. I see systems where others see chaos. Identifying unique opportunities to cut through
+                        the noise and order complexity. I am an effective clear communicator, with strong intentions
+                        and instincts, understanding sequencing and strategy deeply. Wherever I choose to concentrate
+                        my focussed time and attention, results and efficiencys are gained.
+                    </p>
+                    <p>I'm driven by exceptional people, high impact environments, attitude and continuous improvement.
+                        I value excellence and set high standards that lift entire organisations up. I've focussed on
+                        delivering measurable results across climate technology-sectors, regenerative agriculture and
+                        live event operations, connecting deeply with the people first. Whether it's working with
+                        field teams in Kenya, Founders in Sweden, Developers in Czech, Indigenous Leaders in India or
+                        festival crews in Portugal and Australia, I build relationships that enable collective
+                        collaboration, turning complexity into solutions that actually work.</p>
                 </div>
             </section>
             <section>
@@ -632,11 +818,11 @@
                         <div class="achievement-label">Trees Planted</div>
                     </div>
                     <div class="achievement-card">
-                        <div class="achievement-number">$650K+</div>
+                        <div class="achievement-number">$950K+</div>
                         <div class="achievement-label">Event Budgets Managed</div>
                     </div>
                     <div class="achievement-card">
-                        <div class="achievement-number">150+</div>
+                        <div class="achievement-number">200+</div>
                         <div class="achievement-label">Team Members Led</div>
                     </div>
                     <div class="achievement-card">
@@ -661,20 +847,23 @@
                         </div>
                         <span class="job-period">2026–Present</span>
                     </div>
-                    <div class="job-location">UAE / Australia / Remote</div>
-                    <div class="job-title">AI Strategy Consulting, Implementation & Education
+                    <div class="job-location">Asia Pacific / Australia / Remote</div>
+                    <div class="job-title">Tech services agency, focussing on custom ops systems and AI.
                     </div>
                     <ul>
-                        <li>Partner with CEOs and Founders to audit business complexity and design custom systems that
-                            deliver measurable ROI—typically reducing operational overhead by 30-40%</li>
-                        <li>Analyze current systems and processes to identify pain points and improvement opportunities,
+                        <li>Work with CEOs and Founders to identify & audit business complexity, designing custom
+                            systems that
+                            deliver measurable ROI. Typical reductions of 30-40%.</li>
+                        <li>Analyse current systems and processes to identify pain points and improvement opportunities,
                             while training teams and improving AI literacy across organisations</li>
-                        <li>Developed frameworks for effective project costing and reporting, ensuring transparency and
-                            accountability in automation projects with clear ROI metrics on optimised processes—concrete
+                        <li>Develop and implement frameworks for effective project costing and reporting, ensuring
+                            transparency and
+                            accountability in projects with clear ROI metrics on optimised processes. Concrete
                             data shared with boards of SMB clients</li>
-                        <li>Developed modular workflow frameworks integrating finance, CRM, and operations tools
-                            (Coda.io, Wise, Asana, n8n)</li>
-                        <li>Applied agentic automation prototypes to real-world business contexts, strengthening
+                        <li>Developed modular workflow frameworks for integrating finance, CRM, and operations tools, to
+                            better measure and manage time spend / sprints.
+                        </li>
+                        <li>Installed gentic prototypes to real-world business contexts, strengthening
                             expertise in data-driven operations and scalable process design</li>
                     </ul>
                 </div>
@@ -692,18 +881,18 @@
                         Nature/Forestry Technology Projects</div>
                     <ul>
                         <li>Designed and implemented operational frameworks for large-scale reforestation and carbon
-                            measurement projects, including a 24 million tree planting initiative over three years</li>
-                        <li>Audited internal workflows and improved team coordination across multiple time zones,
-                            deploying scalable documentation and automations that improved project delivery speed by 40%
-                            and accuracy by 25%</li>
+                            measurement projects, including a 24 million tree planting initiative over 2.5 years</li>
+                        <li>Constructed internal workflows and improved team coordination across multiple time zones,
+                            deploying documentation that improved project delivery speed and accuracy.</li>
                         <li>Collaborated with data, field, and product teams to link on-ground operations with digital
                             systems, developing product requirements and feature requests for technical teams</li>
                         <li>Developed comprehensive SOP library with 84 active SOPs across tree plantation operations in
                             northeast India, standardising operations and enabling scalable team onboarding</li>
-                        <li>Designed relational data systems and database architectures that connect disparate tools and
-                            create unified operational views</li>
-                        <li>Architected business logic and decision frameworks that automate complex workflows and
-                            reduce manual intervention</li>
+                        <li>Designed relational data systems and database architectures that connected disparate tools
+                            and
+                            created unified operational views</li>
+                        <li>Architected business logic and decision frameworks that reduced workflow complexity and
+                            manual intervention</li>
                     </ul>
                     <button class="photo-toggle-button" onclick="toggleGallery('earthbanc-gallery')"
                         aria-expanded="false" aria-controls="earthbanc-gallery">
@@ -1102,43 +1291,17 @@
             </section>
             <section>
                 <h2>Technical Skills</h2>
-                <div style="margin-top: 20px;">
-                    <div class="skill-category">Automation & Integration</div>
-                    <div class="skills-grid">
-                        <div class="skill-item">n8n, Zapier, API Integration</div>
-                        <div class="skill-item">Coda.io, Airtable</div>
-                        <div class="skill-item">Business Process Automation</div>
-                    </div>
-
-                    <div class="skill-category">Project & Operations Management</div>
-                    <div class="skills-grid">
-                        <div class="skill-item">Asana, Monday.com, Jira</div>
-                        <div class="skill-item">CRM Systems (Custom & Enterprise)</div>
-                        <div class="skill-item">Microsoft & Google Suite</div>
-                    </div>
-
-                    <div class="skill-category">Financial & Data Tools</div>
-                    <div class="skills-grid">
-                        <div class="skill-item">QuickBooks, Wise, Financial Reporting</div>
-                        <div class="skill-item">Database Architecture & Design</div>
-                        <div class="skill-item">Data Analysis & Visualization</div>
-                    </div>
-
-                    <div class="skill-category">Creative & Production Tools</div>
-                    <div class="skills-grid">
-                        <div class="skill-item">Web Design & Development</div>
-                        <div class="skill-item">Adobe Creative Suite</div>
-                        <div class="skill-item">Audio Production & Photography</div>
-                        <div class="skill-item">Live Production & Site Mapping</div>
-                        <div class="skill-item">Avid Media Composer</div>
-                    </div>
+                <div class="technical-skills-content" style="margin-top: 20px;">
+                    <p class="skill-line"><span class="skill-category-inline">Automation & integration</span> — <span class="skill-tools">n8n, Zapier, API Integration, Coda.io, Airtable, Business Process Automation</span></p>
+                    <p class="skill-line"><span class="skill-category-inline">Project & operations management</span> — <span class="skill-tools">Asana, Monday.com, Jira, CRM Systems (Custom & Enterprise), Microsoft & Google Suite</span></p>
+                    <p class="skill-line"><span class="skill-category-inline">Financial & data tools</span> — <span class="skill-tools">QuickBooks, Wise, Financial Reporting, Database Architecture & Design, Data Analysis & Visualization</span></p>
+                    <p class="skill-line"><span class="skill-category-inline">Creative & production tools</span> — <span class="skill-tools">Web Design & Development, Adobe Creative Suite, Audio Production & Photography, Live Production & Site Mapping, Avid Media Composer</span></p>
                 </div>
             </section>
             <section>
                 <h2>Education & Certifications</h2>
                 <ul class="education-list">
-                    <li><strong>Bachelor of Design</strong> — Swinburne University</li>
-                    <li><strong>Diploma of Audio Production</strong> — Collarts University</li>
+                    <li><strong>Diploma of Audio Production</strong> — <span class="education-institution">Collarts University</span></li>
                 </ul>
             </section>
             <section>
@@ -1151,7 +1314,7 @@
             </section>
             <section>
                 <h2>Professional References</h2>
-                <p style="color: #999; font-size: 0.9em; line-height: 1.8;">Professional and personal references
+                <p class="reference-request-text">Professional and personal references
                     available upon request.
                     <a href="mailto:willdundo@gmail.com?subject=Reference Request&body=Company:%0D%0APosition:%0D%0AYour Name:%0D%0A%0D%0APlease provide details about the role and I'll share relevant references."
                         class="reference-link">Request References</a>
@@ -1160,7 +1323,9 @@
             <div class="pdf-container">
                 <a href="https://calendar.app.google/k9y7V9mU5WbWkgTT8" target="_blank" class="meeting-button">Book a
                     Meeting</a>
+                <a href="cv-print.html" class="pdf-button">Print version (white / PDF)</a>
                 <a href="javascript:window.print()" class="pdf-button">Download PDF</a>
+                <span class="pdf-hint">Use your browser’s print dialog and choose “Save as PDF” — Turn on <strong>Background graphics</strong> so the black theme prints. Layout is set for 2 pages.</span>
             </div>
         </div>
     </div>

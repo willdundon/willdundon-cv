@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will Dundon - CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #2a2a2a;
+            background: #ffffff;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+        }
+
+        header {
+            padding: 50px 50px 35px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        h1 {
+            font-size: 2.6em;
+            margin-bottom: 6px;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            color: #111;
+        }
+
+        .contact-info {
+            margin-top: 14px;
+            font-size: 0.88em;
+            color: #555;
+            letter-spacing: 0.01em;
+        }
+
+        .focus-area {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #666;
+            line-height: 1.5;
+            max-width: 700px;
+        }
+
+        .content {
+            padding: 40px 50px 50px;
+        }
+
+        section {
+            margin-bottom: 36px;
+        }
+
+        h2 {
+            color: #111;
+            font-size: 0.72em;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 14px;
+            font-weight: 600;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #eee;
+        }
+
+        h3 {
+            color: #111;
+            margin-bottom: 2px;
+            font-size: 1.05em;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+            gap: 16px;
+        }
+
+        .job-title-with-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .job-period {
+            color: #777;
+            font-size: 0.84em;
+            font-weight: 400;
+            white-space: nowrap;
+        }
+
+        .job-location {
+            color: #777;
+            font-size: 0.84em;
+            margin-bottom: 4px;
+            font-weight: 300;
+        }
+
+        .job-title {
+            color: #555;
+            font-size: 0.88em;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        .experience-item {
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+
+        li {
+            margin-bottom: 6px;
+            padding-left: 16px;
+            position: relative;
+            color: #444;
+            font-size: 0.88em;
+            line-height: 1.6;
+        }
+
+        li:before {
+            content: "\2022";
+            position: absolute;
+            left: 0;
+            color: #333;
+        }
+
+        li strong {
+            color: #222;
+            font-weight: 500;
+        }
+
+        .summary {
+            background: #f8f8f8;
+            padding: 28px 30px;
+            margin-bottom: 40px;
+            font-size: 0.92em;
+            line-height: 1.7;
+            color: #444;
+            border-left: 1px solid #ddd;
+        }
+
+        .summary p {
+            margin-bottom: 14px;
+        }
+
+        .summary p:last-child {
+            margin-bottom: 0;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .achievement-card {
+            padding: 18px 12px;
+            background: #f8f8f8;
+            border-left: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .achievement-number {
+            font-size: 1.6em;
+            color: #111;
+            margin-bottom: 4px;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+        }
+
+        .achievement-label {
+            color: #666;
+            font-size: 0.78em;
+            line-height: 1.3;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4px 24px;
+            margin-top: 12px;
+        }
+
+        .skill-item {
+            padding: 4px 0;
+            color: #444;
+            font-size: 0.88em;
+            font-weight: 300;
+        }
+
+        .skill-category {
+            color: #444;
+            font-size: 0.75em;
+            margin-top: 28px;
+            margin-bottom: 6px;
+            text-transform: none;
+            letter-spacing: 0.02em;
+            font-weight: 500;
+        }
+
+        .skill-category:first-child {
+            margin-top: 0;
+        }
+
+        .technical-skills-content .skills-grid {
+            grid-template-columns: 1fr;
+            gap: 2px 0;
+            margin-top: 6px;
+        }
+
+        .skill-line {
+            margin-bottom: 14px;
+            font-size: 0.92em;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        .skill-line:last-child {
+            margin-bottom: 0;
+        }
+
+        .skill-line .skill-category-inline {
+            font-weight: 500;
+            font-size: 0.9em;
+            color: #111;
+        }
+
+        .skill-line .skill-tools {
+            color: #666;
+            font-weight: 400;
+        }
+
+        .education-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .education-list li {
+            margin-bottom: 14px;
+            padding-left: 0;
+            color: #444;
+            font-size: 0.92em;
+            line-height: 1.5;
+        }
+
+        .education-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .education-list li:before {
+            display: none;
+        }
+
+        .education-list strong {
+            color: #111;
+            font-weight: 500;
+            font-size: 0.9em;
+        }
+
+        .education-list .education-institution {
+            color: #666;
+            font-weight: 400;
+        }
+
+        .global-text {
+            color: #444;
+            font-size: 0.9em;
+            line-height: 1.7;
+        }
+
+        .reference-text {
+            color: #666;
+            font-size: 0.88em;
+            line-height: 1.7;
+        }
+
+        .website-link {
+            font-size: 0.84em;
+            color: #666;
+        }
+
+        /* Print-specific styles */
+        @media print {
+            body {
+                background: #fff;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .container {
+                max-width: none;
+            }
+
+            header {
+                padding: 28px 0 24px;
+            }
+
+            .content {
+                padding: 24px 0 0;
+            }
+
+            section {
+                margin-bottom: 18px;
+                page-break-inside: auto;
+            }
+
+            .experience-item {
+                page-break-inside: auto;
+                margin-bottom: 16px;
+                padding-bottom: 16px;
+            }
+
+            .summary {
+                page-break-inside: avoid;
+            }
+
+            .achievements-grid {
+                page-break-inside: avoid;
+            }
+
+            @page {
+                size: A4;
+                margin: 14mm 16mm;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 30px 25px 25px;
+            }
+
+            .content {
+                padding: 30px 25px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .achievements-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .job-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Will Dundon</h1>
+            <div class="contact-info">
+                Melbourne / Global Remote &middot; LinkedIn &middot; willdundo@gmail.com &middot; +61 413 341 480
+            </div>
+            <div class="focus-area">
+                Executive Leadership &middot; Strategy &middot; Systems Design, Feedback &amp; Implementation &middot;
+                Automation &middot; Operations &middot;
+                Cross-Cultural Leader &middot; Technical Executer &middot; Web Design &amp; Development &middot; Project
+                Management
+            </div>
+        </header>
+
+        <div class="content">
+            <section>
+                <div class="summary">
+                    <p>I am Will Dundon. A natural leader, entrepreneur, system designer, operator and automation expert.
+                        I see systems where others see chaos. Identifying unique opportunities to cut through the
+                        noise and order complexity. I am an effective clear communicator, with strong intentions and
+                        instincts, understanding sequencing and strategy deeply. Wherever I choose to concentrate my
+                        focussed time and attention, results and efficiencys are gained.</p>
+                    <p>I'm driven by exceptional people, high impact environments, attitude and continuous improvement.
+                        I value excellence and set high standards that lift entire organisations up. I've focussed on
+                        delivering measurable results across climate technology-sectors, regenerative agriculture and
+                        live event operations, connecting deeply with the people first. Whether it's working with
+                        field teams in Kenya, Founders in Sweden, Developers in Czech, Indigenous Leaders in India
+                        or festival crews in Portugal and Australia, I build relationships that enable collective
+                        collaboration, turning complexity into solutions that actually work.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Key Achievements</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-number">24M+</div>
+                        <div class="achievement-label">Trees Planted</div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-number">$950K+</div>
+                        <div class="achievement-label">Event Budgets Managed</div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-number">200+</div>
+                        <div class="achievement-label">Team Members Led</div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-number">92</div>
+                        <div class="achievement-label">Active SOPs Developed</div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-number">10+</div>
+                        <div class="achievement-label">Countries Worked</div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Experience</h2>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title-with-link">
+                            <h3>Ni-lu.ai</h3>
+                            <span class="website-link">&middot; ni-lu.ai</span>
+                        </div>
+                        <span class="job-period">2026&ndash;Present</span>
+                    </div>
+                    <div class="job-location">Asia Pacific / Australia / Remote - (Contract and
+                        project-based work)</div>
+                    <div class="job-title">Tech services agency, focussing on custom ops systems and AI.</div>
+                    <ul>
+                        <li>Work with CEOs and Founders to identify &amp; audit business complexity, designing custom
+                            systems that
+                            deliver measurable ROI. Typical reductions of 30-40% in manual operations.</li>
+                        <li>Analyse current systems and processes to identify pain points and improvement opportunities,
+                            whilst training teams and improving AI literacy across organisations.</li>
+                        <li>Implement developed frameworks for effective project costing and reporting, ensuring
+                            transparency and
+                            accountability in projects, with clear ROI metrics on optimised processes. Concrete
+                            data shared with boards of SMB clients</li>
+                        <li>Developed modular frameworks, integrating finance, CRM and operational tools to
+                            better understand time spend and relate actions reliably to results through incentivised
+                            performance
+                            structures.</li>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title-with-link">
+                            <h3>Earthbanc.io</h3>
+                            <span class="website-link">&middot; earthbanc.io</span>
+                        </div>
+                        <span class="job-period">2022&ndash;Present (3 Years)</span>
+                    </div>
+                    <div class="job-location">Remote Developing World (Sweden / India / Kenya)</div>
+                    <div class="job-title">Executive Operations Manager - Systems, Operations and Executive
+                        Leadership -
+                        Nature/Forestry Technology Projects</div>
+                    <ul>
+                        <li>Designed and implemented operational frameworks for large-scale reforestation and carbon
+                            projects, including a 24 million tree planting initiative over 2.5 years in northeast India.
+                        </li>
+                        <li>Constructed internal workflows and improved team coordination across multiple time zones,
+                            deploying documentation and databases that improved project understanding, delivery speeds
+                            and accuracy.
+                        </li>
+                        <li>Collaborated with data, field, and product teams to align on-ground operational realities
+                            with digital
+                            systems, developing product requirements and feature requests for technical teams.</li>
+                        <li>Developed comprehensive SOP system & library in collaboration with local teams, totalling 84
+                            active SOPs across the tree plantation operations.
+                        <li>Designed relational data systems and database architectures that connected disparate tools
+                            and
+                            created unified operational views</li>
+                        <li>Architected business logic in the project's infancy, working closely with founders and
+                            C-Suite on
+                            organisational structure's and decision frameworks
+                            to enable operations to scale.</li>
+                        <li>Directly supported the CEO internationally, continously identifying and solving bottlenecks,
+                            through extensive time spent
+                            with local teams in Kenya, India and Sweden.</li>
+                        <li>Onboarded and trained new executives into systems and processes, continously
+                            sharing understanding and knowledge developed in collaboration
+                            with international and local project management teams.</li>
+                        <li>Migrated project knowledge and workflows from India to Kenya, revising systems and processes
+                            for the African project context,
+                            in close collaboration with local management teams.</li>
+                        <li>Assisted the CEO with strategic alignment and successful project pitches to both private and
+                            public sector clients, converting 2 large
+                            opportunities with signed agreements.</li>
+                        <li>Spent weeks in Narok local county, building local project management teams, preparing for
+                            contract start dates, training 6 staff and enabling key local leads to take ownership of the
+                            project.</li>
+                        <li>Continously advised and informed the CEO on best decisions from my experience and relations
+                            with wider staff on the ground (400 international).</li>
+                        <li>Assisted CEO with his migration and international move from Sweden to Australia, assisting
+                            with handover to AU local executive teams.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title-with-link">
+                            <h3>Whitvoir: Artist Agency</h3>
+                            <span class="website-link">&middot; whitvoir.com</span>
+                        </div>
+                        <span class="job-period">2020&ndash;Present (5 Years)</span>
+                    </div>
+                    <div class="job-location">Melbourne / Berlin / Remote</div>
+                    <div class="job-title">Founder &amp; Owner</div>
+                    <ul>
+                        <li>Founded the brand, the label and the agency, built a community of artists and fans who want
+                            to repeatedly work with us.</li>
+                        <li>Architected, designed and implemented operational systems and relational databases that
+                            have grown the agency from 1 to multiple represented artists, whilst reducing my overarching
+                            time spend on the business by 60%.</li>
+                        <li>Established clear revenue streams, totalling $150K+ in revenue, invested time to define
+                            clear roles &
+                            responsibilities, hired and trained 1 VA to manage the business and measurable growth
+                            incentives that enabled our teams to grow with
+                            clarity while incentivised for perfomance.</li>
+                        <li>Organised successful multi-city international tours for artists through Asia Pacific
+                            regions and coordinated logistics for EU artists to play in India, China, Japan and Korea,
+                            building relationships with local promoter networks also.</li>
+                        <li>Identified and automated contact onboarding via clearly separated email routes. Integrated
+                            APIs for PandaDoc enabling automated contracting through buttons in SDK packs
+                            integrated with coda.io, enabling parsing of data via emails into automated contracting.
+                            Also designed clear call sequencing and phased onboarding.</li>
+                        <li>Developed & implemented
+                            transparent deal-tracking systems, automating agency booking and related
+                            logistics operation, implemented dealIDs and integrated Wise financial API with our Supabase
+                            Postgres database.</li>
+                        <li>Automated invoicing with Xero API and integrated with our Supabase Postgres database to
+                            match transactions and feeds automatically, ensuring all invoices are paid on time with
+                            auto-reminders.</li>
+                        <li>Built company website, AI assisted HTML, React, next.js - linking automation flows with
+                            external inflow,
+                            directing
+                            branding
+                            and market expansion for
+                            independent electronic
+                            artists.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <h3>Event Operations &amp; Live Production</h3>
+                        <span class="job-period">2017&ndash;2023</span>
+                    </div>
+                    <div class="job-location">Australia / Portugal / New Zealand</div>
+                    <div class="job-title">Multiple Roles</div>
+                    <ul>
+                        <li><strong>Waking Life Festival</strong> (LX Crew Operations, 2022&ndash;2023, Portugal):
+                            Lighting
+                            crew management and PA/EA to Lighting Director, developing team management systems
+                            and operations coordination. This included living remotely for 45 days on site in Crato,
+                            Portugal.</li>
+                        <li><strong>Mode Festival</strong> (Artist Experience Manager, 2022&ndash;2023, Sydney): Managed
+                            logistics, hosting, and coordination for 20+ domestic and international acts, overseeing all
+                            transport and show-day operations. I've done this for multiple events and festivals outside
+                            of this one like Now or Never in Melbourne.</li>
+                        <li><strong>Tabula Rasa Festival</strong> (Co-Founder/Director, 2020&ndash;2022): Produced
+                            a 2,000+ person capacity, 3-day camping festival, with a $650K+ operating budget, managing
+                            100+ staff and
+                            contractors. Led strategy, budgeting, stakeholder management, and creative direction,
+                            additionally programming 60+ artists and production over 3 stages. Managed stakeholder
+                            engagement with local council, government, authorities, event suppliers, venue owners and
+                            more. Maintained relationships and records with a wide variety of internal staff, led
+                            conversations and briefed team leads each day the operation was live, also promoted and sold
+                            the 2000 tickets. Wound down the company after 2nd year business failure and managed the
+                            wind up process of the company.</li>
+                        <li><strong>Live Broadcast</strong> (NEP, Gravity Media &ndash; Operations Management &amp; AV,
+                            2017&ndash;2023): Freelance broadcast operations for major live televised events, managing
+                            AV
+                            operations, build out, pack downs, and technical support.</li>
+                        <li><strong>Showmakers</strong> (Studio/Edit Assistant, 2017&ndash;2019, Victoria): Camera
+                            operation,
+                            editing, graphics, and audio production for TV productions (7-Mate), with Avid Media
+                            Composer training.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Core Strengths</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">Systems Thinking &amp; Design</div>
+                    <div class="skill-item">Global &amp; Remote Operations</div>
+                    <div class="skill-item">Leadership - (Cross-Cultural)</div>
+                    <div class="skill-item">Optimisation & efficiency</div>
+                    <div class="skill-item">Workflow Architecture</div>
+                    <div class="skill-item">Communication &amp; Strategy</div>
+                    <div class="skill-item">Stakeholder Management</div>
+                    <div class="skill-item">Budgeting, Expense Management &amp; Forecasting</div>
+                    <div class="skill-item">Resource Planning</div>
+                    <div class="skill-item">Calm Under Pressure</div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Technical Skills</h2>
+                <div class="technical-skills-content">
+                    <p class="skill-line"><span class="skill-category-inline">Automation &amp; integration</span>
+                        - <span class="skill-tools">Cursor, Claude, API Integration, Coda.io, Sheets,
+                            Airtable</span></p>
+                    <p class="skill-line"><span class="skill-category-inline">Project &amp; operations management</span>
+                        - <span class="skill-tools">Asana, Monday.com, Jira, Coda.io, CRM Systems (Custom &amp;
+                            Enterprise), Microsoft &amp; Google Suite</span></p>
+                    <p class="skill-line"><span class="skill-category-inline">Financial &amp; data tools</span> -
+                        <span class="skill-tools">Xero &amp; Wise, Supabase, Data Analysis &amp; Visualisation, Database
+                            Architecture &amp; Design</span>
+                    </p>
+                    <p class="skill-line"><span class="skill-category-inline">Creative &amp; production tools</span>
+                        - <span class="skill-tools">Web Design &amp; Development, Adobe Creative Suite, Audio
+                            Production &amp; Photography, Live Production &amp; Site Mapping, Avid Media Composer,
+                            Ableton Live</span></p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Education &amp; Certifications</h2>
+                <ul class="education-list">
+                    <li><strong>Diploma of Audio Production</strong> &mdash; <span
+                            class="education-institution">Collarts University</span></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Global Experience</h2>
+                <p class="global-text">I've lived and worked in Sweden, Kenya, India, Portugal, Germany, Japan,
+                    Indonesia, Thailand, and
+                    Australia, collaborating with multi-disciplinary, multi-cultural teams in sustainability, creative
+                    production, and technology. Extended stays include 6 months in Northeast India/Meghalaya and 3
+                    months in Kenya working on large reforestation projects.</p>
+            </section>
+
+            <section>
+                <h2>Interests</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">Ultra Running, Climbing, Gym, Hiking, Camping, Skiing, Traveling</div>
+                    <div class="skill-item">Reading, Writing, Philosophy, Neuroscience, Music Production, French, Japan
+                    </div>
+                    <div class="skill-item">AI, Robotics, Automation, Generative AI, Technology, AI ethics and Safety
+                    </div>
+                    <div class="skill-item">Learning Python, Web Design &amp; Development, Learning to code</div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Professional References</h2>
+                <p class="reference-text">Professional and personal references available upon request.
+                    willdundo@gmail.com</p>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "will-dundon-cv",
+  "private": true,
+  "scripts": {
+    "export-pdf": "node export-pdf.js"
+  },
+  "devDependencies": {
+    "puppeteer": "^23.0.0"
+  }
+}
