@@ -10,7 +10,7 @@ const http = require('http');
 const path = require('path');
 const fs = require('fs');
 
-const PORT = 37542;
+const PORT = parseInt(process.env.CV_PORT, 10) || 37542;
 const ROOT = __dirname;
 
 function serveFile(req, res) {
@@ -39,11 +39,15 @@ function serveFile(req, res) {
 
 const PAGE = process.env.CV_PAGE || 'cv-print-clean.html';
 const OUTPUT_DIR = process.env.CV_PDF_OUTPUT || path.join(process.env.HOME || require('os').homedir(), 'Downloads');
-const OUTPUT_NAME = 'Will-Dundon-CV.pdf';
+const OUTPUT_NAME = process.env.CV_PDF_NAME || 'Will-Dundon-CV.pdf';
 
 async function main() {
-  const server = http.createServer(serveFile).listen(PORT, '127.0.0.1');
-  const url = `http://127.0.0.1:${PORT}/${PAGE}`;
+  const server = http.createServer(serveFile);
+  await new Promise((resolve, reject) => {
+    server.listen(0, '127.0.0.1', resolve).on('error', reject);
+  });
+  const port = server.address().port;
+  const url = `http://127.0.0.1:${port}/${PAGE}`;
 
   let puppeteer;
   try {
